@@ -1,0 +1,145 @@
+    /*
+1. Position
+2. Box model
+3. Typography
+4. Visuals
+5. Miscellaneus
+*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Readex Pro', sans-serif;
+        background-color: #151011;
+    }
+    
+    header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    header img {
+        margin: 0 auto;
+        margin-top: 50px;
+        min-width: 40px;
+        max-width: 80px;
+        min-height: 40px;
+        max-height: 80px;
+    }
+    
+    header a {
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        background-image: url(../assets/arrow.png);
+        background-size: contain;
+    }
+    
+    section {
+        width: 100%;
+        /* display: flex; */
+        height: auto;
+        justify-content: center;
+    }
+    
+    form {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+        color: black;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: rgba(240, 46, 46, 0.4) 5px 5px, rgba(240, 46, 46, 0.3) 10px 10px, rgba(240, 46, 46, 0.2) 15px 15px, rgba(240, 46, 46, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        min-width: 300px;
+    }
+    
+    input {
+        cursor: pointer;
+        width: fit-content;
+        border-style: solid;
+        border-radius: 5px;
+        margin: 10px;
+        color: rgba(0, 0, 0, .6);
+        background: #ffffff;
+        text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        text-align: center;
+    }
+    
+    label {
+        background-color: white;
+        font-family: 'Readex Pro';
+    }
+    
+    button {
+        width: 100px;
+        border-style: solid;
+        border-radius: 5px;
+        margin: 10px;
+        color: rgba(0, 0, 0, .6);
+        background: #ffffff;
+        text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    
+    .files-container {
+        width: 70%;
+        height: 170px;
+        margin: 0 auto;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: white;
+        margin-top: 15px;
+    }
+    
+    input[type="file"] {
+        font-size: 12px;
+        /* width: inherit; */
+        border-style: solid;
+        border-radius: 5px;
+        margin: 10px auto;
+        color: rgba(0, 0, 0, .6);
+        background: #ffffff;
+        text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    
+    .button-wrap {
+        position: relative;
+        margin: 0 auto;
+        background-color: white;
+        width: inherit;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 12px 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, .6);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    
+    #files-container {
+        color: white;
+        list-style: none;
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    #delete-button {
+        background-color: red;
+    }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src https://cdn.example.net; child-src 'none'; object-src 'none'"> -->
+    <link rel="stylesheet" type="text/css" href="css/panel-style.css">
+    <script defer src="panel-script.js"></script>
+    <title>Panel de Control</title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/mrvapeslogo.png" alt="mrvapes logo">
+        <a href="index.html"></a>
+    </header>
+    <section>
+        <form accept-charset="UTF-8" enctype="multipart/form-data" action="../components/banner/network.js" autocomplete="off" method="POST" target="_blank">
+            <label for="user">Banners Activos</label><br/>
+            <ul id="files-container">
+
+            </ul>
+        </form>
+        <form accept-charset="UTF-8" enctype="multipart/form-data" action="http://localhost:3000/banner" autocomplete="off" method="POST" target="_blank">
+            <div class="container">
+                <div class="button-wrap">
+                    <!-- <label class="button" for="upload">Subir</label> -->
+                    <input type="text" id="name" placeholder="Nombre de Archivo" value="" name="name" required>
+                    <input id="image" name="file" value="Subir" placeholder="Subir Archivo" type="file" required>
+                    <button id="upload" value="post-request" type="submit">Enviar</button>
+                    <!-- <input id="upload" type=" submit " value="Enviar " onclick="submit() "> -->
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
