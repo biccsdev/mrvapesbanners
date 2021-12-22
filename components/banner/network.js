@@ -28,6 +28,16 @@ router.post('/', upload.single('file'), function(req, res) {
         });
 });
 
+router.post('/:id', function(req, res) {
+    controller.deleteBanner(req.params.id)
+        .then(() => {
+            response.success(req, res, `Imagen con id: ${req.params.id} ,eliminada`, 200);
+        })
+        .catch(e => {
+            response.error(req, res, 'Internal Error', 500, e);
+        })
+});
+
 router.get('/', function(req, res) {
     controller.getBanners()
         .then((banners) => {
