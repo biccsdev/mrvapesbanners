@@ -38,6 +38,15 @@ function deleteBanner(id) {
     });
 }
 
+// function replaceBetween(text) {
+//     for (i = 0; i < text.length; i++) {
+//         if (text[i] = '') {
+//             text[i] = '-';
+//         }
+//     }
+//     return text;
+// }
+
 module.exports = {
     addBanner,
     getBanners,
