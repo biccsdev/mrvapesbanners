@@ -19,7 +19,7 @@ const upload = multer({ storage: storage })
 router.post('/', upload.single('file'), function(req, res) {
     console.log(req.body);
     console.log(req.file);
-    controller.addBanner(req.body.name, req.file, req.file.path)
+    controller.addBanner(req.file.filename, req.body.name, req.file, req.file.path)
         .then((fullMessage) => {
             response.success(req, res, fullMessage, 201);
         })

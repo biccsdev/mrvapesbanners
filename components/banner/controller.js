@@ -1,12 +1,17 @@
 const store = require('./store');
 
-function addBanner(bannerName, banner, path) {
+function addBanner(filename, bannerName, banner, path) {
     if (!banner) {
         return Promise.reject(' [controller] Invalid Input');
+    }
+    var fileUrl = '';
+    if (filename) {
+        fileUrl = `http://localhost:3000/app/files/${filename}`;
     }
     const bannerObj = {
         name: bannerName,
         img: banner,
+        url: fileUrl,
     };
     return store.add(bannerObj, path);
 }

@@ -1,17 +1,30 @@
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+const bannersContainer = document.getElementById("banners-container");
+const slides = document.getElementById("mySlides");
+
+fetch('http://localhost:3000/banner')
+    .then(response => response.json())
+    .then(json => {
+        console.log(json)
+        console.log(json.message)
+        for (let i = 0; i < json.message.length; i++) {
+            //Recieve image url from api
+            var image = `<img id="image-container" class="mySlides" src="${json.message[i].url}">`;
+            bannersContainer.innerHTML += image;
+        }
+        carousel();
+    });
 
 
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.user.value;
-    const password = loginForm.password.value;
+var slideIndex = 0;
 
-    if (username === "admin" && password === "adminmrvapes12") {
-        alert("Haz iniciado sesion con exito.");
-        location.assign("panel.html");
-    } else {
-        loginErrorMsg.style.opacity = 1;
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
     }
-})
+    slideIndex++;
+    if (slideIndex > x.length) { slideIndex = 1 }
+    x[slideIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}

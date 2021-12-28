@@ -143,3 +143,8 @@
     #delete-button {
         background-color: red;
     }
+    
+    ul {
+        overflow: hidden;
+        overflow-y: scroll;
+    }

@@ -6,8 +6,9 @@ const mySchema = new Schema({
     //will be an array of objects
     //banner: {
     name: String,
-    img: { data: Buffer, contentType: String }
-    //}
+    img: { data: Buffer, contentType: String },
+    url: String
+        //}
 });
 
 const model = mongoose.model('banners', mySchema);
