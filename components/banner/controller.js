@@ -6,6 +6,7 @@ function addBanner(filename, bannerName, banner, path) {
     }
     var fileUrl = '';
     if (filename) {
+        replaceBetween(filename);
         fileUrl = `http://localhost:3000/app/files/${filename}`;
     }
     const bannerObj = {
@@ -38,14 +39,14 @@ function deleteBanner(id) {
     });
 }
 
-// function replaceBetween(text) {
-//     for (i = 0; i < text.length; i++) {
-//         if (text[i] = '') {
-//             text[i] = '-';
-//         }
-//     }
-//     return text;
-// }
+function replaceBetween(text) {
+    for (i = 0; i < text.length; i++) {
+        if (text[i] === '') {
+            txt = txt.replace(/\s/g, "-");
+        }
+    }
+    return text;
+}
 
 module.exports = {
     addBanner,
