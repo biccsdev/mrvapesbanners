@@ -10,7 +10,7 @@ const router = require('./network/routes');
 const config = require('./config');
 
 db(config.dbUrl);
-app.use(cors());
+app.use(cors({ origin: true, credentials: true  }));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
